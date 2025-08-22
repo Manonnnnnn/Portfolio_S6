@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Analyses Approfondies</title>
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="boxed">
+            <div class="flex aligncenter space-between">
+                <a href="index.html" class="header-logo">
+                    <img src="img/logo.jpeg">
+                </a>
+                <ul class="header-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="sae.html">SAÉ</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="section">
+            <div class="boxed text-center">
+                <h2>📚 PORTFOLIO</h2>
+                <p><em>Dans cette partie, nous verrons les savoirs et savoir-faire que j'ai acquis et mis en place durant cette année d'alternance.</em></p>
+            </div>
+            
+            <!-- Compétence 1 -->
+            <div class="card portfolio-card" id="competence-1">
+                <h3>Compétence 1 : Réaliser un développement d'application</h3>
+                
+                <div class="ac-section">
+                    <h4>Savoirs fondamentaux maîtrisés</h4>
+                    <ul>
+                        <li><strong>Création de script Jython</strong></li>
+                        <li><strong>Maîtrise de l'outil XL Release</strong></li>
+                        <li><strong>Développement de tâches automatisées</strong></li>
+                    </ul>
+                </div>
+
+                <div class="trace-section zigzag-right">
+                    <div class="zigzag-content">
+                        <div class="zigzag-image">
+                            <div class="double-images-vertical">
+                                <div class="image-group">
+                                    <img src="img/commandeCurl1.png">
+
+                                    <p class="legend"><strong>Trace 1 :</strong> Commande curl qui permet de soumettre un jcl sur DDO1</p>
+                                </div>
+                                <div class="image-group">
+                                    <img src="img/commandeCurl2.png">
+
+                                    <p class="legend"><strong>Trace 2 :</strong> Seconde commande curl qui récupère la sysout du job soumis</p>
+                                </div>
+                                
+                                <div class="image-group">
+                                    <img src="img/trace2.png" alt="Interface admin">
+                                    <p class="legend"><strong>Trace 3 :</strong> Sysout du job contenant le code RC</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zigzag-text">
+                            <h4>Script batch et commandes CURL pour l'automatisation mainframe</h4>
+                            <p><strong>Contexte :</strong> Développement d'un script batch utilisant des commandes CURL pour automatiser la vérification de bordereaux dans les lots E-Gen via des interactions avec le mainframe.</p>
+                            
+                            <p><strong>Analyse :</strong></p>
+                            <p>Le principe du script est d'utiliser des commandes curl pour se connecter au mainframe sur la partition dd01 (hors production), il lance un jcl (job control language est un langage utilisé sur les mainframes IBM pour donner des instructions à l'ordinateur sur la manière d'exécuter des tâches ou des programmes), contenu dans un fichier texte qui permet de récupérer un job id. Ce Job id est par la suite utilisé dans la seconde commande curl qui récupère sa sysout (voir trace 3) puis par la suite, on récupère le code RC qui selon son contenu, nous indique si oui ou non le bordereau est dans un lot egen et si on continue ou non la release.</p>
+                            <p>Ces deux captures d'écran (trace 1 et 2) montrent le fonctionnement des commandes curl pour lancer un jcl sur dd01 et récupérer la sysout du job. L'analyse du contenu de la sysout se fait dans la suite du script avec une simple condition if/else. Si le code est égal à 0000, le bordereau n'est pas présent dans un lot E-gen et nous pouvons poursuivre la livraison. Si le code est égal à 0002, cela signifie que le bordereau est déjà présent dans un lot E-gen ce qui signifie que la livraison de ce bordereau a déjà été traitée ou est en train d'être traitée et qu'il n'est pas nécessaire de poursuivre la release. Si un autre code apparaît c'est qu'il y a une autre erreur et la release est arrêtée.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="competence-bilan">
+                    <h4>💡 Bilan de maîtrise - Compétence 1</h4>
+                    <p>Ces traces démontrent ma maîtrise des savoirs fondamentaux en développement d'application : programmation avancée, architecture logicielle, utilisation d'outils spécialisés et application de méthodologies rigoureuses. Le projet réalisé illustre une approche professionnelle du développement, avec une attention particulière à la qualité, la maintenabilité et l'évolutivité du code.</p>
+                </div>
+            </div>
+
+            <!-- Compétence 2 -->
+            <div class="card portfolio-card" id="competence-2">
+                <h3>Compétence 2 : Optimiser des applications</h3>
+                
+                <div class="ac-section">
+                    <h4>Savoirs fondamentaux maîtrisés</h4>
+                    <ul>
+                        <li><strong>Analyse de performance</strong> : Identification des goulots d'étranglement et optimisation des temps d'exécution</li>
+                        <li><strong>Profilage de code</strong> : Analyse comportementale des scripts et amélioration de la logique</li>
+                        <li><strong>Optimisation des ressources</strong> : Réduction des actions manuelles et automatisation intelligente</li>
+                        <li><strong>Architecture efficace</strong> : Conception de solutions évolutives et performantes</li>
+                    </ul>
+                </div>
+
+                <div class="trace-section zigzag-left">
+                    <div class="zigzag-content">
+                        <div class="zigzag-image">
+                            <img src="img/trace3.png" alt="Script d'optimisation">
+                            <p class="legend"><strong>Trace 4 :</strong> Script Python d'optimisation de la gestion des informations manquantes</p>
+                        </div>
+                        <div class="zigzag-text">
+                            <h4>Script d'optimisation de la gestion des informations manquantes</h4>
+                            <p><strong>Contexte :</strong> Ce script python permet de vérifier la tâche « Informations sur la demande » qui est une tâche qui nécessite de répondre à des questions sur la spécificité de la demande de changements.
+                                S'il manque des informations, alors le script recommence la tâche tout en gardant les informations déjà répondues, afin que l'utilisateur remplisse les informations manquantes. On ne peut pas passer à la suite tant que les informations ne sont pas toutes complétées.</p>
+                            
+                            <ul>
+                                <li><strong>Cela permet de gérer les erreurs et les oublis de l'utilisateur</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trace-section zigzag-right">
+                    <div class="zigzag-content">
+                        <div class="zigzag-image">
+                            <div class="double-images-vertical">
+                                <div class="image-group">
+                                    <img src="img/variable.png" style="width: 500px; height: auto;">
+                                    <p class="legend"><strong>Trace 5 :</strong> Système optimisé de gestion des variables pour l'automatisation</p>
+                                </div>
+                                <div class="image-group">
+                                    <img src="img/variableComplet.png" style="width: 500px; height: auto;">
+                                    <p class="legend"><strong>Trace 6 :</strong> Système optimisé de gestion des variables pour l'automatisation</p>              
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zigzag-text">
+                            <h4>Optimisation des variables et automatisation des changements</h4>
+                            <p><strong>Contexte :</strong> Développement d'un système optimisé de récupération et traitement des variables XL Release pour automatiser la création des demandes de changement.</p>
+                            
+                            <p><strong>Analyse approfondie de l'optimisation :</strong></p>
+                            <p>Cette optimisation démontre ma maîtrise de l'<strong>analyse des goulots d'étranglement</strong>. J'ai identifié que la saisie manuelle des informations constituait une perte de temps significative.</p>
+                            
+                            <ul>
+                                <li><strong>Récupération automatique :</strong> Les variables saisies sont automatiquement réutilisées</li>
+                                <li><strong>Élimination des ressaisies :</strong> Zéro redondance dans la saisie</li>
+                                <li><strong>Gain de temps :</strong> Réduction du temps de traitement</li>
+                                <li><strong>Fiabilité accrue :</strong> Élimination des erreurs de transcription</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="competence-bilan">
+                    <h4>💡 Bilan de maîtrise - Compétence 2</h4>
+                    <p>Ces traces démontrent ma maîtrise des savoirs fondamentaux en optimisation d'applications : analyse de performance, profilage de code, et conception de solutions efficaces. Les optimisations réalisées ont un impact mesurable sur les temps de traitement et la fiabilité des processus. Mon approche méthodique d'identification des goulots d'étranglement et de mise en œuvre de solutions adaptées illustre une maîtrise solide des techniques d'optimisation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section dark">
+        <div class="boxed text-center">
+            <h2>Contact</h2>
+            <div class="flex space-between">
+                <div class="w32 contact">
+                    <span class="label">E-mail</span>
+                    <span class="value">manon.grandmougin.prestataire@bpce-it.fr</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

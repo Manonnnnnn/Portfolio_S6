@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAÉ - Travail d'Alternance</title>
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="boxed">
+            <div class="flex aligncenter space-between">
+                <a href="index.html" class="header-logo">
+                    <img src="img/logo.jpeg">
+                </a>
+                <ul class="header-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="sae.html">SAÉ</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="section">
+            <div class="boxed text-center">
+                <h2>🏢 SAÉ</h2>
+                <p><em>Cette partie se concentre sur les apprentissages critiques des trois compétences à acquérir pour cette troisième année de BUT informatique.</em></p>
+            </div>
+
+            <!-- Compétence 1 -->
+            <div class="card sae-card">
+                <h3>Compétence 1 : Réaliser un développement d'application</h3>
+                
+                
+                    <p><strong>Description du travail :</strong> Reprise et évolution du template développé durant mon stage, avec ajout de nouvelles fonctionnalités et adaptation aux besoins évolutifs de l'équipe.</p>
+                    
+                    <p><strong>AC1 - Choisir et implémenter les architectures adaptées :</strong></p>
+                    <p>J'ai développé les templates sur une architecture de production existante, déjà implémentée par BPCE-IT.</p>
+                    
+                    <ul>
+                        <li>Repositionnement de certaines tâches pour optimiser le workflow</li>
+                        <li>Ajout de nouvelles tâches nécessaires pour la livraison de bordereau</li>
+                        <li>Modification des "Informations sur la demande"</li>
+                        <li>Développement de scripts de vérification</li>
+                    </ul>
+
+                <div class="illustration-section zigzag-right">
+                    <div class="zigzag-content">
+                        <div class="zigzag-image">
+                            <div class="image-group">
+                                <img src="img/avantTemplate.png" alt="Interface utilisateur">
+                                <p class="legend"><strong>Illustration 1 :</strong> Version du template au début de mon alternance</p>
+                            </div>
+                            
+                            <div class="image-group">
+                                <img src="img/apresTemplate.png" alt="Interface admin">
+                                <p class="legend"><strong>Illustration 2 :</strong> Version finale du template</p>
+                            </div>
+                        </div>
+                        <div class="zigzag-text">
+                            <p><strong>AC2 - Faire évoluer une application existante :</strong></p>
+                            <p>Un comparatif entre l'application réalisée durant mon stage (illustration 1) et celle que j'ai réalisée durant mon alternance (illustration 2) permet de voir l'évolution du template. Il y a eu quelques changements sur la position de certaines tâches qui ne se trouvent plus au même endroit. Des tâches ont été ajoutées après avoir revu des idées pour le template avec mon équipe. Des fonctionnalités ont été ajoutées et modifiées, par exemple, les informations sur la demande ont changé, les questions demandées ne sont plus les mêmes et ce changement a été répliqué sur le template.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="illustration-section zigzag-left">
+                    <div class="zigzag-content">
+                        <div class="zigzag-image">
+                            <img src="img/DDC.png" alt="Demande de changement">
+                            <p class="legend"><strong>Illustration 3 :</strong> Documentation créée pour l'équipe</p>
+                        </div>
+                        <div class="zigzag-text">
+                            <p><strong>AC3 - Intégrer des solutions dans un environnement de production :</strong></p>
+                            <p>Étant donné que le template n'est pas terminé, je n'ai pas pu le mettre en production. Mais j'ai mis en place des solutions pour que ce template soit finalisé après mon départ. Tout d'abord, j'ai créé une documentation sur le template qui explique les différentes tâches du template et une documentation sur les scripts pour que mon équipe, qui ne connaît pas le langage python puisse comprendre l'objectif des scripts. Aussi, j'ai pu « former » un collègue sur le fonctionnement du template et les scripts en cours de création. Il a des bases sur les langages de programmation Shell donc il comprend la logique. Il sera chargé de reprendre et finir les scripts. Une fois cela terminé, le template sera terminé et pourra être utilisé par mon équipe.</p>
+                            <p>De plus, certaines fonctionnalités pourront être reprises par ma nouvelle équipe (IRZ) qui travaille déjà avec des scripts XLR. Ils comptent réutiliser la fonctionnalité sur la création de changement, qui est plus rapide que de devoir le faire depuis la demande Sun.</p>
+                            <p>Cependant, il y a la fonctionnalité de création de changement qui est déjà opérationnelle en production. Comme on peut le voir sur l'illustration 3, la création de changement comporte de nombreuses informations à compléter. Ces informations sont récupérées dans différentes tâches de la release et sont stockées dans des variables. Ces variables sont ensuite utilisées dans la tâche de création de changement ce qui permet d'avoir une demande de changement complétée et prête à passer à l'étape de validation.</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compétence 2 -->
+            <div class="card sae-card">
+                <h3>Compétence 2 : Optimiser des applications</h3>
+                
+                <div class="illustration-section zigzag-right">
+                    <div class="zigzag-content">
+
+                        <div class="zigzag-text">                            
+                            <p><strong>AC1 - Anticiper les résultats de diverses métriques :</strong></p>
+                            <p>Mes scripts batch anticipent la sortie de la sysout du job. Selon le résultat du code RC analysé, le script affiche un message informatif indiquant si le bordereau est présent dans un lot E-Gen.</p>
+                            
+                            <p><strong>AC2 - Profiler, analyser et justifier le comportement d'un code existant :</strong></p>
+                            <p>J'ai développé un script qui convertit une date (format jj/mm/aaaa) et une heure (format hh:mm:ss) pour créer une date unifiée. Ce script permet de calculer et formater l'heure de début du changement choisi par l'utilisateur. Pour créer un changement, il faut mettre une heure de début au format jj/mm/aaaa hh:mm:ss ainsi qu'une heure de fin au même format. Ce script est donc utile car il calcule l'heure de fin en rajoutant une heure par rapport à l'heure de début (les personnes qui créent des changements avec l'outil Pulse choisissent toujours de mettre l'heure de fin avec une heure supplémentaire à l'heure de début. J'ai donc choisi de faire la même chose mais cela se fait automatiquement.). Ce script qui formate les heures automatiquement permet d'éviter d'entrer ces valeurs à la main ce qui fait gagner du temps et rend la création du changement plus efficace. Cette optimisation améliore la cohérence des données temporelles.</p>
+                        
+                            <p><strong>AC3 - Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d'application :</strong></p>
+                            <p>Cet apprentissage critique n'a pas pu être mis en œuvre dans le cadre de mon projet d'alternance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compétence 6 -->
+            <div class="card sae-card">
+                <h3>Compétence 6 : Collaborer au sein d'une équipe informatique</h3>
+                            
+                <p><strong>AC1 - Organiser et partager une veille numérique :</strong></p>
+                <p>La rédaction de documentation qui a pour but de faciliter la compréhension du fonctionnement du template et des scripts. Mon équipe n'est pas familière avec XL release ni avec le langage python, j'ai donc écrit des documentations où mon équipe pourra se référer si besoin.</p>
+                
+                <p><strong>AC2 - Identifier les enjeux de l'économie de l'innovation numérique :</strong></p>
+                <p>L'objectif de ce template est d'automatiser au maximum la livraison des bordereaux. Ainsi, grâce à des tâches automatisées, la livraison est plus efficace. Ce gain de temps est crucial pour une entreprise dans le domaine bancaire car elle traite beaucoup de données et elle a besoin d'outils efficaces pour pouvoir tout faire fonctionner en évitant des pannes ou des problèmes qui impacteraient les clients.</p>
+
+                <p><strong>AC3 - Guider la conduite du changement informatique au sein d'une organisation :</strong></p>
+                <p>J'ai rédigé une documentation complète expliquant le fonctionnement du script et du template pour que mon équipe puisse disposer d'un support de référence.</p>
+                
+                <p><strong>AC4 - Accompagner le management de projet informatique :</strong></p>
+                <p>J'accompagne le management de mon projet, en contactant des personnes lorsqu'il y a un blocage, je mets en place et participe aux réunions sur le sujet. J'ai aussi eu l'occasion de faire une démo de mon projet à mon équipe, même s'il n'était pas fini.  
+                    Étant donné que dans mon équipe, je suis la seule qui fait du xlrelease, j'ai été obligée de collaborer avec des personnes d'autres équipes. J'ai donc pu apprendre grâce à ces personnes mais cela était aussi un désavantage car je ne pouvais pas me permettre de toujours les contacter au moindre problème</p>
+            </div>
+
+            <!-- Bilan général -->
+            <div class="card bilan-card">
+                <div class="boxed text-center">
+                    <h3>🎯 BILAN GÉNÉRAL SAÉ</h3>
+                    <p>Mon alternance chez BPCE-IT m'a permis de couvrir l'ensemble des apprentissages critiques des 3 compétences du BUT Informatique parcours A. J'ai développé des solutions techniques concrètes (templates, scripts d'automatisation) tout en acquérant des compétences essentielles pour une étudiante en fin de BUT. Cette expérience professionnelle illustre ma capacité à faire évoluer des applications existantes, optimiser des processus et travailler efficacement en équipe dans un environnement professionnel.</p>       
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section dark">
+        <div class="boxed text-center">
+            <h2>Contact</h2>
+            <div class="flex space-between">
+                <div class="w32 contact">
+                    <span class="label">E-mail</span>
+                    <span class="value">manon.grandmougin.prestataire@bpce-it.fr</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
